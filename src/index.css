@@ -1,0 +1,113 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+body * {
+  margin: 10px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  place-items: center;
+}
+
+.header {
+  /* border: 2px solid red; */
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 0.9rem;
+}
+
+.card-grid {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  max-width: inherit;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(169, 94, 218);
+  border: none;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #242424;
+  border: 2px solid rgb(169, 94, 218);
+  transform: scale(1.025);
+  transition: 0.1s transform ease-in;
+}
+
+.card.highlighted {
+  background-color: #242424;
+  border: 2px solid rgb(169, 94, 218);
+}
+
+.card.matched {
+  background-color: rgb(106, 34, 155);
+  border: #242424;
+}
+
+.button {
+  background-color: rgb(169, 94, 218);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.button:hover {
+  background-color: rgb(106, 34, 155);
+  transition: 0.1s background-color ease-in-out;
+  cursor: pointer;
+}
